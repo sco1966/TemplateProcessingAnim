@@ -21,7 +21,7 @@ float z =0;
    float zpos =10;
    float ypos =0;
   boolean record;
-  
+
   float motion =0;
 
 void setup()
@@ -30,7 +30,7 @@ void setup()
  //fullScreen(P3D);
  frameRate(120);
   background(0);
-  
+
 
 }
 
@@ -38,19 +38,19 @@ void setup()
 
 void draw()
 {
-  
+
  //   pushStyle();
  //rectMode(CORNER);
  fill(0,0,0,10);
   rect(0,0,width,height);
  // popStyle();
-  
+
  pushStyle();
 pushMatrix();
 if(frameCount%3 == 0){
   build();
 
-  
+
 }
 popMatrix();
 popStyle();
@@ -58,7 +58,7 @@ popStyle();
 motion = (motion + 0.01)%6.28;
 
  //println(motion);
- 
+
   //delay(speed);
   //println(counter);
 }
@@ -67,6 +67,6 @@ motion = (motion + 0.01)%6.28;
 
 
 void mousePressed(){
- 
+
 start = !start;
 }
