@@ -3,7 +3,7 @@
 boolean start=true;
 
 PImage images,images2;
-int currentTweet;
+
 
 String url2="";
 String url3="";
