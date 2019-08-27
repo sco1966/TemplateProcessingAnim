@@ -137,15 +137,9 @@ void build(){
         rotatez=0;
       }
       
-      
-      // zpos = map(mouseY,0,height,-5,20);
-      ////countPetal =mouseX;
-      //countPetal =(int)map(mouseX,0,width,6,50);
-      //tranz =map(mouseY,0,height,1,0.1);
-      //ypos =map(mouseY,0,height,-3,10);
-     // zpos = map(mouseY,0,height,-5,20);
+   
        z = sin(motion);
-       println(z);
+       //println(z);
     
      if(start){
         ypos =map(z,-1,1,6,10);
@@ -159,13 +153,5 @@ void build(){
         tranz =map(z,-1,1,3,0.01);
      }
      
-      
-      //println(zpos);
-      
-   // countPetal =(int)map(z,-1,1,40,50);
-      
-      //countPetal =(int)map(motion,0,6.28,6,50);
-      //tranz =map(mouseY,0,height,1,0.1);
-       
-     // ypos =map(mouseY,0,height,-3,10);
+
 }
