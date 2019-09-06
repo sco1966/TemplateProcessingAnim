@@ -61,8 +61,12 @@ void draw()
      println("work in here...."); 
     break;
 
-  case 2:             // Default executes if the case labels
-    println("then here....");   // don't match the switch parameter
+  case 2:            
+    println("then here....");   
+    break;
+    
+      default:
+    println("default...");  
     break;
   }
 }
