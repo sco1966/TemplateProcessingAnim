@@ -26,7 +26,7 @@ float motion =0;
 
 void setup()
 {
-  size(1000, 1000, P3D);
+  size(1280, 720, P3D);
   //fullScreen(P3D);
   frameRate(120);
   background(0);
