@@ -57,8 +57,10 @@ void draw()
     break;
 
   case 1: 
- 
-     println("work in here...."); 
+ //put settings here to call next video...
+ //glitch etc....
+     //println("work in here...."); 
+     //start =false;
     break;
 
   case 2:            
