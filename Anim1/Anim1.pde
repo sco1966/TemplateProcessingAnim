@@ -28,12 +28,12 @@ void setup()
 {
   size(1280, 720, P3D);
   //fullScreen(P3D);
-  frameRate(120);
+  frameRate(60);
   background(0);
   
     bloomsettings();
   shadersettings();
-   lines = loadStrings("linesz.txt");
+   lines = loadStrings("linesz2.txt");
   smooth(16);
   //blendMode(EXCLUSION);
   //colorMode(HSB, 360, 100, 100, 100);
@@ -61,6 +61,7 @@ void draw()
     popMatrix();
     popStyle();
 
+   // motion = (motion + 0.01)%6.28; 
     motion = (motion + 0.01)%6.28; 
     break;
 

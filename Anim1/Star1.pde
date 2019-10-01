@@ -12,12 +12,16 @@ void petal() {
              float time = millis()*0.001666666666;
     
       
-      float r = map(sin(time+i*0.011111111111111), -1, 1, 0, 255);
-     // println(r);
-    float g = map(sin(time+22.5*0.011111111111111), -1, 1, 0, 255);
-     float b = map(sin(time+45+i*0.011111111111111), -1, 1, 0, 255);
+      float r = map(sin((time+i)*0.0111111), -1, 1, 0, 255);
+     
+    float g = map(sin(time+22.5*0.0111111), -1, 1, 0, 255);
+    //float g = map(sin((time+22.5)>>1), -1, 1, 0, 255);
+   
+     //float b = map(sin((time+45+i)*0.0111111), -1, 1, 0, 255);
+     float b = 33;
+
     
-  
+   //println(b);
         stroke(r,g,b);
         if(j<0){
         
