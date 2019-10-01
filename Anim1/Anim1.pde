@@ -30,6 +30,14 @@ void setup()
   //fullScreen(P3D);
   frameRate(120);
   background(0);
+  
+    bloomsettings();
+  shadersettings();
+   lines = loadStrings("lines.txt");
+  smooth(16);
+  //blendMode(EXCLUSION);
+  //colorMode(HSB, 360, 100, 100, 100);
+xx=0;
 }
 
 
@@ -57,10 +65,17 @@ void draw()
     break;
 
   case 1: 
- //put settings here to call next video...
- //glitch etc....
-     //println("work in here...."); 
-     //start =false;
+shaderdraw();
+  //NEXT FILTER EVERY TIME YOU PRESS A
+ 
+
+ // rect(144,0,200,1000);
+  drawsetting();
+  
+  move++;
+ if(move >= lines.length-1){
+    move=0;
+  }
     break;
 
   case 2:            
@@ -82,4 +97,8 @@ void keyPressed() {
 void mousePressed(){
   start = !start; 
   
+}
+
+void movieEvent(Movie m) {
+  m.read();
 }
