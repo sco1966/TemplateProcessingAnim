@@ -89,9 +89,9 @@ shaderdraw();
 }
 
 void keyPressed() {
-  screens= (screens +1)%3;
+  //screens= (screens +1)%3;
   
-  println(screens);
+  //println(screens);
 }
 
 void mousePressed(){

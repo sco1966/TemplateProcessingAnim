@@ -126,4 +126,11 @@ int DISPLAY_MODE = 3;
     if(key >= '0' && key <= '8'){
       DISPLAY_MODE = key - '0';
     }
+    
+     if(key == 'z'){
+       screens= (screens +1)%3;
+     }
+      //screens= (screens +1)%3;
+  
+  //println(screens);
   }
