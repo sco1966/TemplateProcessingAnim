@@ -6,9 +6,9 @@ pg.lights();
  
    xx+=1;
 
-  pg.translate(width / 2, height / 2);
+  pg.translate(width / 2, height / 2,-mouseX);
   pg.rotateY(map(xx, 0, 20, 0, PI));
-  pg.rotateZ(map(int(lines[move]), 0, height, 0, -PI));
+  //pg.rotateZ(map(int(lines[move]), 0, height, 0, -PI));
   //pg.noStroke();
   pg.noFill();
   pg.stroke(255, 255, 255);

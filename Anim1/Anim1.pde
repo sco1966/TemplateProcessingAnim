@@ -33,7 +33,7 @@ void setup()
   
     bloomsettings();
   shadersettings();
-   lines = loadStrings("lines.txt");
+   lines = loadStrings("linesz.txt");
   smooth(16);
   //blendMode(EXCLUSION);
   //colorMode(HSB, 360, 100, 100, 100);
