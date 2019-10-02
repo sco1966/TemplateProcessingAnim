@@ -41,7 +41,7 @@ void shadersettings(){
   bloom = loadShader("bloomHDR.glsl");
   bloom.set("iResolution", float(width), float(height));
   
-    videoComp = new Movie(this, "test1.mp4");
+    videoComp = new Movie(this, "test2.mp4");
   videoComp.loop();
   
 }
