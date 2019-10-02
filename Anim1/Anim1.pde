@@ -90,9 +90,9 @@ shaderdraw();
 }
 
 void keyPressed() {
-  //screens= (screens +1)%3;
-  
-  //println(screens);
+if ((key == 'a') || (key == 'A')) {
+    skip = true;
+  }
 }
 
 void mousePressed(){
