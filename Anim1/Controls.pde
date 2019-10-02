@@ -23,8 +23,7 @@ int move =0;
 
 void shadersettings(){
   
-    videoComp = new Movie(this, "wetCity.mp4");
-  videoComp.loop();
+
 
   //LOAD IN SHADERS
   vhs = loadShader("vhs2.glsl");
@@ -42,7 +41,8 @@ void shadersettings(){
   bloom = loadShader("bloomHDR.glsl");
   bloom.set("iResolution", float(width), float(height));
   
-  
+    videoComp = new Movie(this, "test1.mp4");
+  videoComp.loop();
   
 }
 
