@@ -1,6 +1,6 @@
 import processing.video.*;
 
-Movie        videoComp;
+Movie        videoComp,videoComp2;
 PShader      vhs, vhs_glitch, vhs_wobble, binaryGlitch, sobel, ascii, bloom;
 
 int          filterState         = 0;
@@ -41,8 +41,7 @@ void shadersettings(){
   bloom = loadShader("bloomHDR.glsl");
   bloom.set("iResolution", float(width), float(height));
   
-    videoComp = new Movie(this, "test2.mp4");
-  videoComp.loop();
+   
   
 }
 
@@ -64,9 +63,49 @@ void shaderdraw(){
 
   //DRAW THE LAYERS
   image(videoComp, 0, 0, width, height);
+  //image(videoComp2, 0, 0, width, height);
   filterLayer();
 
   //READOUT
   surface.setTitle("FPS " + nf(int(frameRate), 2) + " || filterState " + currentFilter);
   
 }
+
+void moviePlay(){
+  if(screens==1){
+     videoComp = new Movie(this, "test2.mp4");
+  videoComp.loop();
+  }
+  
+  if (screens==2){
+    videoComp.stop();
+     videoComp = new Movie(this, "corridor1.mp4");
+  videoComp.loop();
+    
+  }
+   if (screens==3){
+    videoComp.stop();
+  //   videoComp = new Movie(this, "corridor1.mp4");
+  //videoComp.play();
+    
+  }
+  
+  
+}
+
+int DISPLAY_MODE = 3;
+  
+  public void keyReleased(){
+    if(key >= '0' && key <= '8'){
+      DISPLAY_MODE = key - '0';
+    }
+   
+     if(key == 'z'){
+       screens= (screens +1)%3;
+       //videoComp.stop();
+       moviePlay();
+     }
+      //screens= (screens +1)%3;
+  
+  //println(screens);
+  }

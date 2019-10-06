@@ -78,7 +78,10 @@ void draw()
     break;
 
   case 2:            
-    println("then here....");   
+    shaderdraw();
+
+
+    drawsetting();  
     break;
 
   default:
