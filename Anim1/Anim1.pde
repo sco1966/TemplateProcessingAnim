@@ -28,8 +28,25 @@ void setup()
 {
   size(1280, 720, P3D);
   //fullScreen(P3D);
-  frameRate(120);
+  frameRate(60);
   background(0);
+
+
+  bloomsettings();
+  shadersettings();
+  lines = loadStrings("linesz2.txt");
+  smooth(16);
+
+  xx=0;
+
+  
+    bloomsettings();
+  shadersettings();
+   lines = loadStrings("lines.txt");
+  smooth(16);
+
+xx=0;
+
 }
 
 
@@ -57,29 +74,52 @@ void draw()
     break;
 
   case 1: 
- //put settings here to call next video...
- //glitch etc....
-     //println("work in here...."); 
-     //start =false;
+
+
+    shaderdraw();
+
+
+    drawsetting();
+
+    move++;
+    if (move >= lines.length-1) {
+      move=0;
+    }
+
+shaderdraw();
+  //NEXT FILTER EVERY TIME YOU PRESS A
+ 
+
+ // rect(144,0,200,1000);
+  drawsetting();
+  
+  move++;
+ if(move >= lines.length-1){
+    move=0;
+  }
+
+
     break;
 
   case 2:            
-    println("then here....");   
+    shaderdraw();
+
+
+    drawsetting();  
     break;
-    
-      default:
+
+  default:
     println("default...");  
     break;
   }
 }
 
 void keyPressed() {
-  screens= (screens +1)%3;
-  
-  println(screens);
+if ((key == 'a') || (key == 'A')) {
+    skip = true;
+  }
 }
 
-void mousePressed(){
-  start = !start; 
-  
+void mousePressed() {
+  start = !start;
 }
