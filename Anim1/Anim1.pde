@@ -86,17 +86,8 @@ void draw()
       move=0;
     }
 
-shaderdraw();
-  //NEXT FILTER EVERY TIME YOU PRESS A
- 
 
- // rect(144,0,200,1000);
-  drawsetting();
-  
-  move++;
- if(move >= lines.length-1){
-    move=0;
-  }
+
 
 
     break;
@@ -122,4 +113,8 @@ if ((key == 'a') || (key == 'A')) {
 
 void mousePressed() {
   start = !start;
+}
+
+void movieEvent(Movie m) {
+  m.read();
 }
