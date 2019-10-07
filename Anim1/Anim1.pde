@@ -31,13 +31,22 @@ void setup()
   frameRate(60);
   background(0);
 
+
   bloomsettings();
   shadersettings();
   lines = loadStrings("linesz2.txt");
   smooth(16);
-  //blendMode(EXCLUSION);
-  //colorMode(HSB, 360, 100, 100, 100);
+
   xx=0;
+
+  
+    bloomsettings();
+  shadersettings();
+   lines = loadStrings("lines.txt");
+  smooth(16);
+
+xx=0;
+
 }
 
 
@@ -66,6 +75,7 @@ void draw()
 
   case 1: 
 
+
     shaderdraw();
 
 
@@ -75,6 +85,20 @@ void draw()
     if (move >= lines.length-1) {
       move=0;
     }
+
+shaderdraw();
+  //NEXT FILTER EVERY TIME YOU PRESS A
+ 
+
+ // rect(144,0,200,1000);
+  drawsetting();
+  
+  move++;
+ if(move >= lines.length-1){
+    move=0;
+  }
+
+
     break;
 
   case 2:            
@@ -98,8 +122,4 @@ if ((key == 'a') || (key == 'A')) {
 
 void mousePressed() {
   start = !start;
-}
-
-void movieEvent(Movie m) {
-  m.read();
 }
