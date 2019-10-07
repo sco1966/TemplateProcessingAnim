@@ -56,27 +56,26 @@ import processing.opengl.PGraphics2D;
       pg_render.blendMode(BLEND); // default
       pg_render.rectMode(CENTER);
    
-          
+          if(screens ==1){
           int col =  color(200, 171, 88);
          // pg_render.
 
       
             pg_render.fill(col);
           
-        // pg_render.rect(300, 0, 150, 6000);
+      
          // pg_render.rect(width/4, 0, 150, 6000);
           
             pg_render.fill(245, 119, 24);
- pg_render.rect((width/4), 0, 100, 1666);
-  //pushStyle();
-  //   pushMatrix();
+ pg_render.rect((width/4), 0, 100, 1666);}
+ else if(screens ==2){
+   pg_render.stroke(30, 171, 88);
+   pg_render.rect(300, 0, 150, 6000);
+ }
+
   pg_render.translate(0,0,int(lines[move]));
   s_start(pg_render);
-  //popMatrix();
-  //popStyle();
-  
-     pg_render.stroke(30, 171, 88);
-  
+
 
     }
     pg_render.endDraw();
